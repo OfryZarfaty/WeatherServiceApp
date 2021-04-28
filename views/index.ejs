@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css" type="text/css">
+    <title>Welcome to my weather service</title>
+</head>
+
+<body id="background-img">
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+            <!--left half of menu (with logo)-->
+            <div class="menu-branding">
+                <div class="logo">
+
+                </div>
+            </div>
+            <!--right half of menu (with list of items)-->
+            <ul class="menu-nav">
+                <li class="nav-item current">
+                    <a href="/" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/weather/data?lat=-90&lan=-179.5" class="nav-link">
+                        Weather/data API
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/weather/summarize?lat=-90&lan=-179.5" class="nav-link">
+                        Weather/summarize API
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <h1 class="large-heading">
+            Tomorrow<span class="text-secondary">.io</span>
+        </h1>
+        <h2 class="small-heading">
+            weather intelligence platform
+        </h2>
+        <div class="icons">
+            <a>
+                <i class="fas fa-bolt fa-2x"></i>
+            </a>
+            <a>
+                <i class="fas fa-snowflake fa-2x"></i>
+            </a>
+            <a>
+                <i class="fas fa-sun fa-2x"></i>
+            </a>
+            <a>
+                <i class="fas fa-cloud fa-2x"></i>
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/b8e4e6d349.js" crossorigin="anonymous"></script>
+</body>
+</html>

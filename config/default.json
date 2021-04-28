@@ -1,0 +1,12 @@
+{
+    "db": {
+        "createTableOneQuery" : "CREATE TABLE IF NOT EXISTS file1 (Longitude float,Latitude float,forecastTime varchar,Temperature float,Precipitation float);",
+        "createTableTwoQuery" : "CREATE TABLE IF NOT EXISTS file2 (Longitude float,Latitude float,forecastTime varchar,Temperature float,Precipitation float);",
+        "createTableThreeQuery" : "CREATE TABLE IF NOT EXISTS file3 (Longitude float,Latitude float,forecastTime varchar,Temperature float,Precipitation float);"
+    },
+    "app":{
+        "weatherDataFileOneQuery" : "SELECT forecastTime,Temperature,Precipitation from file1 WHERE Longitude=$1 and Latitude=$2",
+        "weatherDataFileTwoQuery" : "SELECT forecastTime,Temperature,Precipitation from file2 WHERE Longitude=$1 and Latitude=$2",
+        "weatherDataFileThreeQuery" : "SELECT forecastTime,Temperature,Precipitation from file3 WHERE Longitude=$1 and Latitude=$2"
+    }
+}

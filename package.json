@@ -1,0 +1,29 @@
+{
+  "name": "weatherapi",
+  "version": "1.0.0",
+  "description": "responsive weather website",
+  "main": "main.js",
+  "scripts": {
+    "prestart": "node data/db_init.js",
+    "start": "node main.js",
+    "sass": "node-sass -w scss/ -o views/css/ --recursive"
+  },
+  "author": "Ofry Zarfaty",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.6",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fast-csv": "^4.3.6",
+    "fs": "*",
+    "node-config": "^0.0.2",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7",
+    "pg": "^8.6.0",
+    "pg-copy-streams": "^5.1.1",
+    "pgtools": "^0.3.1",
+    "yesql": "^5.0.0"
+  }
+}
