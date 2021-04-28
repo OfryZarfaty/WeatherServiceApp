@@ -23,17 +23,6 @@ const client = new Client({
 
 client.connect();
 
-/*DELETE EXISTING TABLES*/
-client.query(`
-DROP TABLE IF EXISTS file1, file2, file3;
-`, (err, res) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    console.log('Tables successfully deleted');
-});
-
 /*CREATE TABLES*/
 client.query(config.get('db.createTableOneQuery'),(err, res) => {
     if (err) {
@@ -69,12 +58,12 @@ const executeQuery = (targetTable) => {
   const execute = (target, callback) => {
       client.query(`Truncate ${target}`, (err) => {
               if (err) {
-                console.log(`Error in creating read stream ${err}`);
-                 client.end();
-                callback(err);
+                  console.log(`Error in creating read stream ${err}`);
+                  client.end();
+                  callback(err);
               } else {
-              console.log(`Truncated ${target}`);
-              callback(null, target);
+                  console.log(`Truncated ${target}`);
+                  callback(null, target);
               }
           });
   }

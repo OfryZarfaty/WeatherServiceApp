@@ -83,6 +83,6 @@ app.get('/weather/summarize', async (req, res) => {
 });
 
 app.listen(PORT, () =>{
-    console.log("listening on port");
+    console.log("listening on port: " + PORT);
 });
 
